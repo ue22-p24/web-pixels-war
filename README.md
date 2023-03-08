@@ -1,4 +1,4 @@
-# ue22-pixel-war$
+# ue22-pixel-war
 
 Sujet de TP aux Mines de Paris, ue22-p22.
 
