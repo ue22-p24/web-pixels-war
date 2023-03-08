@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
             //TODO: pourquoi pas rafraichir la grille toutes les 3 sec ?
 
             //TODO: voire même rafraichir la grille après avoir cliqué sur un pixel ?
+
+            //TODO: pour les avancés: ça pourrait être utile de pouvoir
+            // choisir la couleur à partir d'un pixel ?
         })
 })
 
