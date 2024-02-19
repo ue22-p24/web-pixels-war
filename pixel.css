@@ -11,10 +11,10 @@
     grid-template-columns: repeat(100, 4px);
     /*TODO à récupérer sur le serveur*/
     grid-template-rows: repeat(100, 4px);
-}
 
-#grid>div {
-    width: 4px;
-    height: 4px;
-    margin: 0px;
+    &>div {
+        width: 4px;
+        height: 4px;
+        margin: 0px;
+    }
 }
