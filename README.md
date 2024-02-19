@@ -1,6 +1,6 @@
 # ue22-pixel-war
 
-Sujet de TP aux Mines de Paris, ue22-p22.
+Sujet de TP aux Mines de Paris, ue22-p23.
 
 Remplir les TODO dans le js, puis dans le css.
 
