@@ -1,7 +1,7 @@
-const PIXEL_URL = "http://pixels-war.oie-lab.net/"
+const PIXEL_URL = "http://pixels-war.oie-lab.net"
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch(PIXEL_URL+"getmap/")
+    fetch("${PIXEL_URL}/api/v1/0000/init", {"credentials":"include"})
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             //TODO: maintenant que j'ai l'id, attacher la fonction refresh(id), à compléter, au clic du bouton refresh
 
             //TODO: attacher au clic de chaque pixel une fonction qui demande au serveur de colorer le pixel sous là forme :
-            // http://pixels-war.oie-lab.net/set/id/x/y/r/g/b
+            // http://pixels-war.oie-lab.net/api/v1/0000/set/id/x/y/r/g/b
             // la fonction getPickedColorInRGB ci-dessous peut aider
 
             //TODO: pourquoi pas rafraichir la grille toutes les 3 sec ?
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //A compléter puis à attacher au bouton refresh en passant mon id une fois récupéré
     function refresh(id) {
-        fetch(PIXEL_URL+"getmap?id="+id)
+        fetch("${PIXEL_URL}/api/v1/0000/deltas?id=${user_id}", {"credentials":"include"})
             .then((response) => response.json())
             .then((json) => {
                 //TODO: maintenant que j'ai le json des deltas, mettre à jour les pixels qui ont changé.
