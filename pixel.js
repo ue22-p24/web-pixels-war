@@ -3,10 +3,12 @@ const MAP_ID = "0000"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    fetch(`${PIXEL_URL}/api/v1/${MAP_ID}/init`, {credentials: "include"})
+    fetch(`${PIXEL_URL}/api/v1/${MAP_ID}/preinit`, {credentials: "include"})
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
+            //TODO: maintenant que j'ai le json de preinit, je peux initialiser ma grille
+
             //TODO: maintenant que j'ai le JSON, afficher la grille, et récupérer l'id
 
             //TODO: maintenant que j'ai l'id, attacher la fonction refresh(id), à compléter, au clic du bouton refresh
