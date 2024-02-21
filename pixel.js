@@ -1,7 +1,9 @@
 const PIXEL_URL = "http://pixels-war.oie-lab.net"
+const MAP_ID = "0000"
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch(`${PIXEL_URL}/api/v1/0000/init`, {credentials: "include"})
+
+    fetch(`${PIXEL_URL}/api/v1/${MAP_ID}/init`, {credentials: "include"})
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
@@ -25,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // À compléter puis à attacher au bouton refresh en passant mon id une fois récupéré
     function refresh(id) {
-        fetch(`${PIXEL_URL}/api/v1/0000/deltas?id=${user_id}`, {credentials: "include"})
+        fetch(`${PIXEL_URL}/api/v1/${MAP_ID}/deltas?id=${user_id}`, {credentials: "include"})
             .then((response) => response.json())
             .then((json) => {
                 //TODO: maintenant que j'ai le json des deltas, mettre à jour les pixels qui ont changé.
