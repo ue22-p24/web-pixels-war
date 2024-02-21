@@ -8,7 +8,10 @@ Remplir les TODO dans le js, puis dans le css.
 
 On utilise principalement deux fonctions de l'API
 
-* `https://pixels-war.oie-lab.net/api/v1/{map_id}/init`
+* `https://pixels-war.oie-lab.net/api/v1/{map_id}/preinit`
+  Pour obtenir une clef pour apeller l'init
+  Contenu de la reponse: `{"key":"some_key"}`
+* `https://pixels-war.oie-lab.net/api/v1/{map_id}/init?key={some_key}`
   pour obtenir - entre autres - toute la map; vous recevrez aussi un `user_id`, que vous allez repasser ensuite à la même fonction.
   Contenu de la reponse: `{"id":"user_id","nx":100,"ny":100,"data":[[...]]}`
 * `https://pixels-war.oie-lab.net/api/v1/{map_id}/deltas?id={user_id}`
