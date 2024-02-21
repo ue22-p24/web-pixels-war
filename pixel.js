@@ -1,4 +1,4 @@
-const PIXEL_URL = "http://pixels-war.oie-lab.net"
+const PIXEL_URL = "https://pixels-war.oie-lab.net"
 const MAP_ID = "0000"
 
 document.addEventListener("DOMContentLoaded", () => {
