@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // choisir la couleur à partir d'un pixel ?
         })
 
-    //TODO: pour les personnes avancées, comment transformer les deux "then" ci-dessus en "asynch / await" ?
+    //TODO: pour les élèves avancés, comment transformer les "then" ci-dessus en "async / await" ?
 
     // À compléter puis à attacher au bouton refresh en passant mon id une fois récupéré
     function refresh(id) {
