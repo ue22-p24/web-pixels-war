@@ -1,7 +1,7 @@
 const PIXEL_URL = "http://pixels-war.oie-lab.net"
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("${PIXEL_URL}/api/v1/0000/init", {"credentials":"include"})
+    fetch(`${PIXEL_URL}/api/v1/0000/init`, {credentials: "include"})
         .then((response) => response.json())
         .then((json) => {
             console.log(json);
@@ -23,18 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //TODO: pour les personnes avancées, comment transformer les deux "then" ci-dessus en "asynch / await" ?
 
-    //A compléter puis à attacher au bouton refresh en passant mon id une fois récupéré
+    // À compléter puis à attacher au bouton refresh en passant mon id une fois récupéré
     function refresh(id) {
-        fetch("${PIXEL_URL}/api/v1/0000/deltas?id=${user_id}", {"credentials":"include"})
+        fetch(`${PIXEL_URL}/api/v1/0000/deltas?id=${user_id}`, {credentials: "include"})
             .then((response) => response.json())
             .then((json) => {
                 //TODO: maintenant que j'ai le json des deltas, mettre à jour les pixels qui ont changé.
-                //"Here be dragons" : comment récupérer le bon div ?
+                // "Here be dragons" : comment récupérer le bon div ?
 
             })
     }
 
-    //Petite fonction facilitatrice pour récupérer la couleur cliquée en RGB
+    // Petite fonction facilitatrice pour récupérer la couleur cliquée en RGB
     function getPickedColorInRGB() {
         let colorHexa = document.getElementById("colorpicker").value
 
