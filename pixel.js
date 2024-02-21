@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //TODO: pour les élèves avancés, comment transformer les "then" ci-dessus en "async / await" ?
 
     // À compléter puis à attacher au bouton refresh en passant mon id une fois récupéré
-    function refresh(id) {
+    function refresh(user_id) {
         fetch(`${PREFIX}/deltas?id=${user_id}`, {credentials: "include"})
             .then((response) => response.json())
             .then((json) => {
