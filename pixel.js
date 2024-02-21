@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(`${PREFIX}/preinit`, {credentials: "include"})
         .then((response) => response.json())
         .then((json) => {
-            console.log(json);
+            console.log(json)
             //TODO: maintenant que j'ai le json de preinit, je peux initialiser ma grille
 
             //TODO: maintenant que j'ai le JSON, afficher la grille, et récupérer l'id
@@ -42,13 +42,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Petite fonction facilitatrice pour récupérer la couleur cliquée en RGB
     function getPickedColorInRGB() {
-        let colorHexa = document.getElementById("colorpicker").value
+        const colorHexa = document.getElementById("colorpicker").value
 
-        let r = parseInt(colorHexa.substring(1,3),16);
-        let g = parseInt(colorHexa.substring(3,5),16);
-        let b = parseInt(colorHexa.substring(5,7),16);
+        const r = parseInt(colorHexa.substring(1, 3), 16)
+        const g = parseInt(colorHexa.substring(3, 5), 16)
+        const b = parseInt(colorHexa.substring(5, 7), 16)
 
-        return [r, g, b];
+        return [r, g, b]
     }
 
 })
