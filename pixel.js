@@ -23,8 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             //TODO: voire même rafraichir la grille après avoir cliqué sur un pixel ?
 
+            //TODO: pour les rapides: afficher quelque part combien de temps
+            // il faut attendre avant de pouvoir poster à nouveau
+
             //TODO: pour les avancés: ça pourrait être utile de pouvoir
             // choisir la couleur à partir d'un pixel ?
+
         })
 
     //TODO: pour les élèves avancés, comment transformer les "then" ci-dessus en "async / await" ?
