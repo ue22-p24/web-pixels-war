@@ -20,8 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // la fonction getPickedColorInRGB ci-dessous peut aider
 
             //TODO: pourquoi pas rafraichir la grille toutes les 3 sec ?
+            // voire même rafraichir la grille après avoir cliqué sur un pixel ?
 
-            //TODO: voire même rafraichir la grille après avoir cliqué sur un pixel ?
+            // cosmétique / commodité / bonus:
+
+            // TODO: pour être efficace, il serait utile d'afficher quelque part
+            // les coordonnées du pixel survolé par la souris
 
             //TODO: pour les rapides: afficher quelque part combien de temps
             // il faut attendre avant de pouvoir poster à nouveau
