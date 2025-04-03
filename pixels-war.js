@@ -1,7 +1,10 @@
 // pour l'instant on ne peut pas y toucher depuis l'interface
 // il faut recharger la page pour changer de carte
 const PIXEL_URL = "https://pixels-war.oie-lab.net"
-const MAP_ID = "0000"
+
+// c'est sans doute habile de commencer avec la carte de test
+// const MAP_ID = "0000"
+const MAP_ID = "TEST"
 
 document.addEventListener("DOMContentLoaded", () => {
 
