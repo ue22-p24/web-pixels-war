@@ -1,9 +1,20 @@
+// pour l'instant on ne peut pas y toucher depuis l'interface
+// il faut recharger la page pour changer de carte
 const PIXEL_URL = "https://pixels-war.oie-lab.net"
 const MAP_ID = "0000"
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const PREFIX = `${PIXEL_URL}/api/v1/${MAP_ID}`
+
+    // pour savoir à quel serveur / carte on s'adresse
+    // on les affiche en dur
+    // pour l'instant on ne peut pas y toucher depuis l'interface
+    // il faut recharger la page pour changer de carte
+    document.getElementById("baseurl").value = PIXEL_URL
+    document.getElementById("mapid").value = MAP_ID
+    document.getElementById("baseurl").readOnly = true
+    document.getElementById("mapid").readOnly = true
 
     fetch(`${PREFIX}/preinit`, {credentials: "include"})
         .then((response) => response.json())
@@ -36,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
     //TODO: pour les élèves avancés, comment transformer les "then" ci-dessus en "async / await" ?
+    //TODO: pour les élèves avancés, faire en sorte qu'on puisse changer de carte
+    //      voir le bouton Connect dans le HTML
 
     // À compléter puis à attacher au bouton refresh en passant mon id une fois récupéré
     function refresh(user_id) {
